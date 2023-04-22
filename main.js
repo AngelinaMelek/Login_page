@@ -1,70 +1,24 @@
-// function setFormMessage(formElement, type, message) {
-//   const messageElement = formElement.querySelector(".form__message");
+const modal = document.getElementById("myModal");
 
-//   messageElement.textContent = message;
-//   messageElement.classList.remove(
-//     "form__message--success",
-//     "form__message--error"
-//   );
-//   messageElement.classList.add(`form__message--${type}`);
-// }
+// Get the button that opens the modal
+const btn = document.querySelector(".form__button");
 
-// function setInputError(inputElement, message) {
-//   inputElement.classList.add("form__input--error");
-//   inputElement.parentElement.querySelector(
-//     ".form__input-error-message"
-//   ).textContent = message;
-// }
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
 
-// function clearInputError(inputElement) {
-//   inputElement.classList.remove("form__input--error");
-//   inputElement.parentElement.querySelector(
-//     ".form__input-error-message"
-//   ).textContent = "";
-// }
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+};
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const loginForm = document.querySelector("#login");
-//   const createAccountForm = document.querySelector("#createAccount");
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
 
-//   document
-//     .querySelector("#linkCreateAccount")
-//     .addEventListener("click", (e) => {
-//       e.preventDefault();
-//       loginForm.classList.add("form--hidden");
-//       createAccountForm.classList.remove("form--hidden");
-//     });
-
-//   document.querySelector("#linkLogin").addEventListener("click", (e) => {
-//     e.preventDefault();
-//     loginForm.classList.remove("form--hidden");
-//     createAccountForm.classList.add("form--hidden");
-//   });
-
-//   loginForm.addEventListener("submit", (e) => {
-//     e.preventDefault();
-
-//     // Perform your AJAX/Fetch login
-
-//     setFormMessage(loginForm, "error", "Invalid username/password combination");
-//   });
-
-//   document.querySelectorAll(".form__input").forEach((inputElement) => {
-//     inputElement.addEventListener("blur", (e) => {
-//       if (
-//         e.target.id === "signupUsername" &&
-//         e.target.value.length > 0 &&
-//         e.target.value.length < 10
-//       ) {
-//         setInputError(
-//           inputElement,
-//           "Username must be at least 10 characters in length"
-//         );
-//       }
-//     });
-
-//     inputElement.addEventListener("input", (e) => {
-//       clearInputError(inputElement);
-//     });
-//   });
-// });
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
