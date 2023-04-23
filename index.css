@@ -131,12 +131,11 @@ h1 span {
     border-radius: 5px;
     background-color: transparent;
     color: var(--color-items);
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 35px;
 }
 .log_in_container__boxes--password:hover,
-.log_in_container__boxes--arrow:hover,
-.dot:hover {
+.log_in_container__boxes--arrow:hover {
     box-shadow: 0 0 4px 2px var(--color-items);
 }
 
@@ -146,6 +145,8 @@ h1 span {
     font-size: 12px;
     font-family: 'Open Sans Regular';
     font-weight: bold;
+    visibility: hidden;
+
 }
 
 .log_in_container__boxes--text a {
@@ -158,12 +159,12 @@ h1 span {
     color: var(--color-primary);
     border-radius: 5px;
     border: none;
-    background-color: #45bf4a;
+    background-color: #5866ea;
     margin-top: 35px;
 }
 
 .log_in_container__boxes--button:hover {
-    box-shadow: 0 0 4px 2px #45bf4a;
+    box-shadow: 0 0 4px 2px #5866ea;
 }    
 
 .log_in_container__boxes--password {
@@ -192,52 +193,24 @@ h1 span {
 }
 
 .log_in_container__boxes div {
-     margin: 0 20px;
+     margin: 5px 20px 0;
      text-align: center;
 }
 
-.dot {
-    height: 10px;
-    width: 10px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
+.options {
+    width: 340px;
+    height: 90px;
+    border:none;
+    outline: none;
+    text-align: center;
+    color: var(--color-items)
 }
 
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+#ages,
+#location,
+#email,
+#password {
+    display: none;
+}
+
   
